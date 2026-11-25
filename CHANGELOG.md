@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- **WRGB II Pro with a DYNP90 name:** a lamp whose Bluetooth name starts with `DYNP90` was not in the prefix
+  table, so `resolve_light` fell back to C II RGB and the lamp lost its white channel: three channels instead of
+  four, and the white entity of earlier versions stayed behind as unavailable. The prefix is now part of WRGB II
+  Pro, which already carries the four-channel WRGB layout.
+
 - **Lite controllers keep their weekday schedule after a power cut:** A II, Z Light TINY (DYZSD), Terrarium Egg and Commander 1 only run their schedule after a power cut when it is written again. This already happened for a schedule set with `chihiros.set_auto_curve`; a schedule set with `chihiros.set_weekday_schedule` is now written again too.
 
 ## 26.11.2 – 05.11.2026

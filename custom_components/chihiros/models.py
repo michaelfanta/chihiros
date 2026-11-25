@@ -59,7 +59,11 @@ LIGHT_MODELS: tuple[LightModel, ...] = (
     LightModel("A II", ("DYNA2", "DYNA2N"), WHITE),
     LightModel("WRGB II", ("DYWRGB",), RGB, sea_led=False),
     LightModel("WRGB II", ("DYNT90", "DYNW30", "DYNW45", "DYNW60", "DYNW90", "DYNW12P", "DYNWRGB"), RGB),
-    LightModel("WRGB II Pro", ("DYWPRO30", "DYWPRO45", "DYWPRO60", "DYWPRO80", "DYWPRO90", "DYWPR120"), WRGB),
+    LightModel(
+        "WRGB II Pro",
+        ("DYWPRO30", "DYWPRO45", "DYWPRO60", "DYWPRO80", "DYWPRO90", "DYWPR120", "DYNP90"),
+        WRGB,
+    ),
     LightModel("WRGB II Slim", ("DYSILN", "DYSL30", "DYSL45", "DYSL60", "DYSL90", "DYSL120", "DYSL12"), RGB),
     LightModel("WRGB VIVID III", ("DYVVD3",), WRGB, fan=True),
     LightModel(

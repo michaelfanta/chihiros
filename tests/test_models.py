@@ -50,6 +50,7 @@ def curve_frames(devices: FakeDevices, name: str) -> list[bytes]:
 def test_model_table():
     assert models.detect_light("DYNA2N1234").name == "A II"
     assert models.detect_light("DYWPRO60ABC").layout == models.WRGB
+    assert models.detect_light("DYNP901234").layout == models.WRGB  # WRGB II Pro, older name scheme
     assert models.detect_light("DYNW60ABC").layout == models.RGB  # WRGB II (regular) has three channels
     assert models.detect_light("dyvvd3abc").fan
     assert models.detect_light("DYNLED01").sea_led and not models.detect_light("DYLED01").sea_led
